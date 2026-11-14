@@ -1,7 +1,6 @@
 name: Tarefa
 description: Trabalho previsto no plano mestre
 title: "[Tarefa] "
-labels: ["tarefa"]
 body:
   - type: input
     id: etapa

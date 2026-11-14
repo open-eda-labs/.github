@@ -27,7 +27,7 @@ jobs:
     uses: open-eda-labs/.github/.github/workflows/lint.yml@main
 ```
 
-  Para chamar a partir de outros repositórios, o acesso a Actions deste repositório precisa estar liberado nas configurações da organização. Isto ainda não foi configurado; por isso o `ci.yml` daqui não chama o reutilizável. A referência `@main` deve virar SHA de commit (D-40).
+  Se este repositório for privado, o acesso a Actions dele precisa estar liberado nas configurações da organização para ser chamado de outros repositórios; isso ainda não foi configurado, e por isso o `ci.yml` daqui não chama o reutilizável. O workflow usa o `.yamllint` e o `.markdownlint-cli2.yaml` do repositório chamador. A referência `@main` deve virar SHA de commit (D-40).
 
 ## Regras
 
