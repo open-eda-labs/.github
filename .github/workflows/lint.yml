@@ -1,0 +1,23 @@
+name: lint
+
+on:
+  workflow_call:
+
+permissions:
+  contents: read
+
+jobs:
+  yamllint:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      # Pendência: pinar por SHA de commit (D-40).
+      - uses: actions/checkout@v4.2.2
+        with:
+          persist-credentials: false
+      # A convenção de lint da org mora aqui; os repositórios não têm .yamllint.
+      - run: >-
+          pipx run yamllint==1.35.1 --strict
+          -d '{extends: default, rules: {line-length: disable,
+          document-start: disable, truthy: {check-keys: false},
+          comments: {min-spaces-from-content: 1}}}' .

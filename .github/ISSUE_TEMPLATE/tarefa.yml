@@ -1,0 +1,33 @@
+name: Tarefa
+description: Trabalho previsto no plano mestre
+title: "[Tarefa] "
+body:
+  - type: input
+    id: etapa
+    attributes:
+      label: Etapa do plano
+      description: Etapa do PLANO_MESTRE (P0..P6 ou E0..E5).
+      placeholder: P1
+    validations:
+      required: true
+  - type: input
+    id: decisoes
+    attributes:
+      label: Decisões relacionadas
+      description: Decisões D-nn do plano que se aplicam.
+      placeholder: D-02, D-40
+  - type: textarea
+    id: descricao
+    attributes:
+      label: Descrição
+      description: O que precisa ser feito. Só dados sintéticos ou públicos; sem segredos.
+    validations:
+      required: true
+  - type: textarea
+    id: criterio
+    attributes:
+      label: Critério de pronto
+      description: Como saber que terminou, de forma verificável.
+      placeholder: "- [ ] ..."
+    validations:
+      required: true
