@@ -22,6 +22,7 @@ Laboratório pessoal de workflows agênticos disparados por eventos: alertas por
 - Tudo como código, versões pinadas, segredos fora do Git (D-40).
 - Mudanças entram por PR. O agente nunca faz merge; escreve só como branch + PR draft (D-02, D-31).
 - Classes de dado: D0 operacional, D1 interno, D2 pessoal, D3 proibido. D3 nunca vai a modelo, trace ou MLflow (D-42).
+- Convenção antes de configuração: YAML para configuração, schemas e fixtures; gRPC entre serviços próprios, HTTP+JSON só nas bordas externas (webhooks de alerta e API do modelo).
 
 ## Plano
 
